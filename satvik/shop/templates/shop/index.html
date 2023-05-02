@@ -1,0 +1,451 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> InternShip Registration </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+</head>
+<style>
+    :root {
+        --jumbotron-padding-y: 3rem;
+    }
+
+    .jumbotron {
+        padding-top: var(--jumbotron-padding-y);
+        padding-bottom: var(--jumbotron-padding-y);
+        margin-bottom: 0;
+        background-color: #fff;
+    }
+
+    @media (min-width: 768px) {
+        .jumbotron {
+            padding-top: calc(var(--jumbotron-padding-y) * 2);
+            padding-bottom: calc(var(--jumbotron-padding-y) * 2);
+        }
+    }
+
+    .jumbotron p:last-child {
+        margin-bottom: 0;
+    }
+
+    .jumbotron-heading {
+        font-weight: 300;
+    }
+
+    .jumbotron .container {
+        max-width: 40rem;
+    }
+
+    .box-shadow {
+        box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    }
+    .pad
+    {
+        padding-top: 10%;
+
+    }
+    .site-footer
+{
+  background-color:#26272b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px;
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
+.foot{
+    padding-top: 10%;
+}
+#jumbo{
+    background-color: aliceblue;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a href="#"><i class="bi bi-person-workspace"></i></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="https://gpnagpur.ac.in/gpn/"><h1 class="text-hide">GPN</h1></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#feature">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#price">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="#form"><button type="button" class="btn btn-outline-Register">Register</button></a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+    <header>
+       
+    </header>
+    <img src="{% static 'shop\images\college.jpg' %}" class="img-fluid" alt="Responsive image">
+    <main role="main">
+
+        <div class="album py-5 bg-light">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top"
+                                src="{% static 'shop\images\snap1.jpg' %}"
+                                alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">
+                                    Learn Via Books Which Written By Honours And Get Opportunity To 
+                                    Win The World 
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="#form"><button type="button" class="btn btn-sm btn-outline-secondary">Register</button></a>
+                                    </div>
+                                    <small class="text-muted">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="{% static 'shop\images\snap2.jpg' %}" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text"> Get Drink And Start Carrier Now With Fresh Mind </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="#form"><button type="button" class="btn btn-sm btn-outline-secondary">Register</button></a>                                      
+                                    </div>
+                                    <small class="text-muted">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top"
+                               src="{% static 'shop\images\snap3.jpg' %}"
+                                alt="Card image cap">
+                            <div class="card-body">
+                                <div id="feature"></div>
+                                <p class="card-text">Learn To Edit VFX Graphic Design Games Photos 
+                                    & Show Your Skills To People And Many More</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="#form"><button type="button" class="btn btn-sm btn-outline-secondary">Register</button></a>
+                                    </div>
+                                    <small class="text-muted">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top"
+                                src="{% static 'shop\images\snap4.jpg' %}"
+                                alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Start To Think And Code With Open World And Mind </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="#form"><button type="button" class="btn btn-sm btn-outline-secondary">Register</button></a>
+                                    </div>
+                                    <small class="text-muted">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top"
+                                src="{% static 'shop\images\snap5.jpg' %}"
+                                alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Unlock Your Skills With Greater Ace And Be Victor !!</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="#form"><button type="button" class="btn btn-sm btn-outline-secondary">Register</button></a>
+                                    </div>
+                                    <small class="text-muted">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top"
+                                src="{% static 'shop\images\snap6.jpg' %}"
+                                alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text"> Learn To Hack Most Experience Honors 
+                                    And Find Your ABilities With intrest
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="#form"><button type="button" class="btn btn-sm btn-outline-secondary">Register</button></a>
+                                    </div>
+                                    <small class="text-muted">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                 
+                </div>
+            </div>
+        </div>
+        <div class="pad">
+            
+        </div>
+        <blockquote class="blockquote text-center" id="price">
+            <p class="mb-0"> Pricing That Comes Under Your Profit </p>
+          </blockquote>
+          
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Sr</th>
+                <th scope="col">Cast</th>
+                <th scope="col">Registration</th>
+                <th scope="col">Unit-Cost</th>
+                <th scope="col">Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>OBC</td>
+                <td>$100</td>
+                <td>$20</td>
+                <td>110.99$</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Others</td>
+                <td>200$</td>
+                <td>40$</td>
+                <td>240.9$</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="4">In Event You Will Get Free Chance TO Learn 
+                    So Don't Miss The Opportunity 
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="pad"></div>
+        <figure class="text-center">
+            <blockquote class="blockquote">
+              <p>  Register With Great Hope  </p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+               By Mad_Max-Internship <cite title="Source Title">Satvik_Yewale</cite>
+            </figcaption>
+        </figure>
+    </main>
+    <div class="form-valid" id="form">
+        <form class="row g-3" action="." method="post" >
+            {% csrf_token %}
+            <div class="col-md-4">
+                <label for="validationServer01" class="form-label">Your Name </label>
+                <input type="text" class="form-control is-valid" id="validationServer01" value="Satvik" name="Name_" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="validationServer02" class="form-label">Your College</label>
+                <input type="text" class="form-control is-valid" id="validationServer02" value="GPN" name="college_" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="validationServerUsername" class="form-label">Your Email</label>
+                <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend3">@</span>
+                    <input type="text" class="form-control is-invalid" id="validationServerUsername"
+                        aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" name="Email_" required>
+                    <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                        Please choose a Email-ID.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="validationServer03" class="form-label">Phone No </label>
+                <input type="number" class="form-control is-invalid" id="validationServer03"
+                    aria-describedby="validationServer03Feedback" name="phone_" required>
+                <div id="validationServer03Feedback" class="invalid-feedback">
+                    Please provide a valid Number .
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label for="validationServer04" class="form-label">Learning Year </label>
+                <input type="number" class="form-control is-invalid" id="validationServer03"
+                aria-describedby="validationServer03Feedback" value="0" name="experience_" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label for="validationServer05" class="form-label">Input Your Intrest</label>
+                <input type="text" class="form-control is-invalid" id="validationServer05"
+                    aria-describedby="validationServer05Feedback" name="Subject_" required>
+                <div id="validationServer05Feedback" class="invalid-feedback">
+                    Please provide a valid Intrest.
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3"
+                        aria-describedby="invalidCheck3Feedback" required>
+                    <label class="form-check-label" for="invalidCheck3">
+                        Agree to terms and conditions
+                    </label>
+                    <div id="invalidCheck3Feedback" class="invalid-feedback">
+                        You must agree before submitting.
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary" type="submit" align-items-center>Submit form</button>
+            </div>
+        </form>
+    </div>
+    <div class="jumbotron" id="jumbo">
+        <h1 class="display-4"> GPN </h1>
+        <p class="lead"> Government Polytechnic Nagpur is The Venue For Internship </p>
+        <hr class="my-4">
+        <p> Let's Head To GPN After Registring Yourself For Internship And You Will Get Other Details & $Payment  </p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        </p>
+      </div>
+    <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <p align="center" class="copyright-text">Copyright &copy; 2023 All Rights Reserved by 
+           <a href="#">@Satvik</a>.
+              </p>
+            </div>            
+          </div>
+        </div>
+  </footer>
+</body>
+</html>
