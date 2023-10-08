@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import internship
+import re
 
 def home_page(request):
 
@@ -11,7 +12,15 @@ def home_page(request):
         phone = request.POST['phone_']
         experience = request.POST['experience_']
         Subject = request.POST['Subject_']
+        
+        pattern = r'^[\w\.-]+@[\w\.-]+\.\w+$'
+        if !re.match(pattern, email):
+            return Httpresponse('Add Valid Mail')
 
+        pattern2 = r'^\d{10}$'
+        if !re.match(pattern, phone):
+            return Httpresponse(' Add Valid Phone Number ')        
+  
         student = internship()
         student.name = name
         student.college = college
@@ -21,9 +30,6 @@ def home_page(request):
         student.Subject = Subject
         student.save()
         return render(request , 'shop\index2.html')
-
-        
-    
     return render(request , 'shop\index.html')
 
 
